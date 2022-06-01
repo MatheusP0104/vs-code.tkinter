@@ -1,6 +1,6 @@
 from tkinter import *
 
-def converter(event):
+def converter():
     if ety1.get().replace('.', '',1).isdigit():
         r = float(ety1.get()) * 1.8 + 32
         lb2['text'] = f'{r:.2f}'
@@ -11,7 +11,7 @@ def converter(event):
 
 
 janela = Tk()
-janela.bind('<Return>', converter)
+janela.bind('<Return>', lambda event:converter())
 janela.config(bg='black')
 lb1 = Label(janela, text='C°', font='Arial 22', foreground='Yellow', bg='black')
 lb2 = Label(janela, text='Resultado em F°', font='Arial 22', foreground='yellow', bg='black')

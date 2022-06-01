@@ -1,6 +1,6 @@
 from tkinter import *
 
-def calcular(event):
+def calcular():
     if ety1.get().replace('.', '',1).isdigit() and ety2.get().replace('.','',1).isdigit():
         imc = float(ety1.get()) / (float(ety2.get()) * float(ety2.get()))
         lb3['text'] = f'{imc:,.2f}'
@@ -10,7 +10,7 @@ def calcular(event):
         lb3['foreground'] = 'red'
 
 janela = Tk()
-janela.bind('<Return>' ,calcular)
+janela.bind('<Return>', lambda event:calcular())
 
 lb1 = Label(janela, text='Peso:', font='Arial 22')
 lb2 = Label(janela, text='Altura:', font='Arial 22')
