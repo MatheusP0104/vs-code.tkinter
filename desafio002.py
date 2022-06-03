@@ -1,5 +1,6 @@
 from tkinter import *
 
+
 def aumentar():
     if int(label1['text']) < 10:
         label1['text'] = int(label1['text']) + 1
