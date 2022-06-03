@@ -70,6 +70,7 @@ janela.bind('/', lambda event:clicar(valor='/'))
 janela.bind('<Return>', lambda event:calcular())
 janela.bind('(', lambda event:clicar(valor='('))
 janela.bind(')', lambda event:clicar(valor=')'))
+janela.bind('.', lambda event:clicar(valor='.'))
 janela.bind('<Escape>', lambda event:apagar())
 janela.bind('<BackSpace>', lambda event:apagar_um())
 
