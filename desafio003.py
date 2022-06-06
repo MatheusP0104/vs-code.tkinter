@@ -12,15 +12,18 @@ def calcular():
 janela = Tk()
 janela.bind('<Return>', lambda event:calcular())
 
-lb1 = Label(janela, text='Peso:', font='Arial 22')
-lb2 = Label(janela, text='Altura:', font='Arial 22')
-lb3 = Label(janela, text='Resultado', font='arial 22', foreground='black')
-ety1 = Entry(janela, font='arial 22')
-ety2 = Entry(janela, font='arial 22')
-bt1 = Button(janela, text='IMC', font='arial 22', command=calcular)
+fr1 = Frame()
+fr2 = Frame()
 
+lb1 = Label(fr1, text='Peso:', font='Arial 22')
+lb2 = Label(fr1, text='Altura:', font='Arial 22')
+lb3 = Label(fr2, text='Resultado', font='arial 22', foreground='black')
+ety1 = Entry(fr1, font='arial 22')
+ety2 = Entry(fr1, font='arial 22')
+bt1 = Button(fr2, text='IMC', font='arial 22', command=calcular)
 
-
+fr1.pack()
+fr2.pack()
 lb1.grid(row=0, column=0)
 lb2.grid(row=1, column=0)
 ety1.grid(row=0, column=1)
