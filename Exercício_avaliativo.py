@@ -24,13 +24,12 @@ def formatado(event = None):
             novo_texto += texto[numeros]  
 
     for num in range(len(data)):
-        for num in range(31):
-            if not data[num] in "0123456789":
-                continue
-            if num in [1,3]:
-                nova_data += data[num] + '/'      
-            else:
-                nova_data += data[num]    
+        if not data[num] in "0123456789":
+            continue
+        if num in [1,3]:
+            nova_data += data[num] + '/'      
+        else:
+            nova_data += data[num]    
 
 
 
@@ -105,7 +104,7 @@ Mensa = Label(Fra_login, text='Use uma conta registrada',font=Fon)
 Email = Label(Fra_login, text='E-mail',font=Fon)
 Pass = Label(Fra_login, text='Senha',font=Fon)
 Log_in = Button(Fra_login, text= 'Entrar',font='Verdana 15 bold', bg='#9128CC', borderwidth=10, command=lambda: [fr0.grid(row=0, column=0, sticky=NSEW, columnspan=2), 
-fr1.grid(row=1, column=0, sticky=NSEW), fr2.grid(row=1, column=1, sticky=NSEW), fr3.grid(row=2, column=0, sticky=NSEW, columnspan=2), Fra_login.grid_forget()])
+fr1.grid(row=1, column=0, sticky=NSEW), fr2.grid(row=1, column=1, sticky=NSEW), fr3.grid(row=2, column=0, sticky=NSEW, columnspan=2), Fra_login.grid_forget(),SENAC.title('Cadastro')])
 Enty1 = Entry(Fra_login, font=Fon)
 Enty2 = Entry(Fra_login, font=Fon,show='*')
 
